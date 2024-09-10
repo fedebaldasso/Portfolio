@@ -1752,7 +1752,7 @@ input {
 .contenedorr button {
   border: none;
   padding: 10px 20px;
-  background: linear-gradient(130deg, #7fbbff, #0078ff);
+  background: linear-gradient(130deg, #0078ff, #0078ff); /*#7fbbff*/
   color: #ffffff;
   border-radius: 3px;
   cursor: pointer;
@@ -1760,4 +1760,12 @@ input {
 
 .contenedorr button:hover {
   background: #003c7f;
+}
+
+.about-me p {
+  text-align: justify;
+}
+
+.wp {
+  color: var(--default-color);
 }
