@@ -1489,6 +1489,7 @@ section,
 
 .portfolio-details .portfolio-description p {
   padding: 0;
+  text-align: justify;
 }
 
 .portfolio-details .portfolio-description .testimonial-item {
@@ -1703,21 +1704,21 @@ input {
 }
 
 .box1 {
-  height: 80vh;
+  height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 20vw;
-  margin-top: 50px;
+  /* margin-top: 40px; */
 }
 
 .box2 {
-  height: 80vh;
+  height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 20vw;
-  margin-top: 50px;
+  /* margin-top: 40px; */
 }
 
 .box1 ul {
@@ -1742,11 +1743,50 @@ input {
   font-weight: bold;
 }
 
+.box3 {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  /* margin-top: 40px; */
+}
+
+.box4 {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  /* margin-top: 40px; */
+}
+
+.box3 ul {
+  list-style: none;
+}
+
+.box4 ul {
+  list-style: none;
+}
+
+.box3 li {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  font-weight: bold;
+}
+
+.box4 li {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  font-weight: bold;
+}
+
 .contenedorr {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
 }
 
 .contenedorr button {
@@ -1760,6 +1800,14 @@ input {
 
 .contenedorr button:hover {
   background: #003c7f;
+}
+
+#cv {
+  margin-bottom: 70px;
+}
+
+#form-button {
+  margin-top: 70px;
 }
 
 .about-me p {
