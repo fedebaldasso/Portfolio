@@ -21,17 +21,17 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #4e4e4e; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #0a090f; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0078ff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --contrast-color: #ffffff; /* The contrast color is used for elements when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors */
+  --background-color: #0a192f; /* Background color for the entire website, including individual sections */
+  --default-color: #8892b0; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #ccd6f6; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #64ffda; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --contrast-color: #a8b2d1; /* The contrast color is used for elements when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #ffffff; /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: #ccd6f6; /* The default color of the main navmenu links */
+  --nav-hover-color: #ccd6f6; /* Applied to main navmenu links when they are hovered over or active */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #0078ff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
@@ -39,7 +39,7 @@
 
 /* Template Custom Colors */
 :root {
-  --alt-background-color: #076cdd;
+  --alt-background-color: #64ffda;
 }
 
 /* Smooth scroll */
@@ -81,9 +81,9 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #000000;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
+  --background-color: #020c1b;
+  --default-color: #ccd6f6;
+  --heading-color: #ccd6f6;
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 20px 0;
@@ -98,6 +98,8 @@ h6 {
 .header .logo img {
   max-height: 32px;
   margin-right: 8px;
+  filter: invert(80%) sepia(51%) saturate(415%) hue-rotate(104deg)
+    brightness(100%) contrast(104%);
 }
 
 .header .logo h1 {
@@ -380,7 +382,7 @@ h6 {
 .footer {
   --background-color: var(--alt-background-color);
   --default-color: #fff;
-  color: var(--default-color);
+  color: #0a192f;
   background-color: var(--background-color);
   font-size: 14px;
   padding: 40px 0;
@@ -402,16 +404,16 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 30%);
+  border: 1px solid color-mix(in srgb, #0a192f, transparent 30%);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, #0a192f, transparent 40%);
   margin: 0 5px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--default-color);
-  border-color: var(--default-color);
+  color: #020c1b;
+  border-color: #020c1b;
 }
 
 .footer .credits {
@@ -422,6 +424,10 @@ h6 {
 
 .footer .credits a {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.footer .credits span {
+  font-weight: bold;
 }
 
 /*--------------------------------------------------------------
@@ -469,7 +475,7 @@ h6 {
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background-color: #3c9982;
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -478,12 +484,16 @@ h6 {
 
 .scroll-top i {
   font-size: 24px;
-  color: var(--contrast-color);
+  color: var(--background-color);
   line-height: 0;
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: color-mix(in srgb, #1e4c41, transparent 20%);
+  color: var(--contrast-color);
+}
+
+.scroll-top:hover i {
   color: var(--contrast-color);
 }
 
@@ -590,6 +600,7 @@ section,
 
 .section-title p {
   margin-bottom: 0;
+  font-weight: bold;
 }
 
 /*--------------------------------------------------------------
@@ -728,6 +739,7 @@ section,
 
 .about .about-me p {
   font-size: 18px;
+  font-weight: bold;
 }
 
 /*--------------------------------------------------------------
@@ -753,7 +765,7 @@ section,
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: var(--heading-color);
   margin-bottom: 10px;
 }
 
@@ -763,6 +775,11 @@ section,
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
+  color: var(--default-color);
+}
+
+.resume .resume-item p {
+  color: var(--heading-color);
 }
 
 .resume .resume-item ul {
@@ -771,6 +788,7 @@ section,
 
 .resume .resume-item ul li {
   padding-bottom: 10px;
+  color: var(--heading-color);
 }
 
 .resume .resume-item:last-child {
@@ -1158,12 +1176,13 @@ section,
   font-size: 20px;
   font-weight: bold;
   margin: 10px 0 5px 0;
+  color: #020c1b;
 }
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
   margin: 0 0 15px 0;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: #0a192f;
 }
 
 .testimonials .testimonial-item .stars {
@@ -1177,7 +1196,7 @@ section,
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, #020c1b, transparent 40%);
   font-size: 26px;
   line-height: 0;
 }
@@ -1198,7 +1217,9 @@ section,
 
 .testimonials .testimonial-item p {
   font-style: italic;
+  font-weight: bold;
   margin: 0 auto 15px auto;
+  color: #020c1b;
 }
 
 .testimonials .swiper-wrapper {
@@ -1266,7 +1287,7 @@ section,
 
 .contact .info-item:hover i {
   background: var(--accent-color);
-  color: var(--contrast-color);
+  color: #020c1b;
 }
 
 .contact .php-email-form {
@@ -1454,6 +1475,7 @@ section,
   list-style: none;
   padding: 0;
   font-size: 15px;
+  color: #ccd6f6;
 }
 
 .portfolio-details .portfolio-info ul li {
@@ -1465,16 +1487,17 @@ section,
 .portfolio-details .portfolio-info ul strong {
   text-transform: uppercase;
   font-weight: 400;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: color-mix(in srgb, #a8b2d1, transparent 30%);
   font-size: 14px;
 }
 
 .portfolio-details .portfolio-info .btn-visit {
   padding: 8px 40px;
   background: var(--accent-color);
-  color: var(--contrast-color);
+  color: var(--background-color);
   border-radius: 50px;
   transition: 0.3s;
+  font-weight: bold;
 }
 
 .portfolio-details .portfolio-info .btn-visit:hover {
@@ -1490,6 +1513,11 @@ section,
 .portfolio-details .portfolio-description p {
   padding: 0;
   text-align: justify;
+  font-weight: 400;
+}
+
+.portfolio-details .portfolio-description span {
+  font-weight: bold;
 }
 
 .portfolio-details .portfolio-description .testimonial-item {
@@ -1545,6 +1573,7 @@ section,
   font-style: italic;
   margin: 0 0 15px 0 0 0;
   padding: 0;
+  color: #ccd6f6;
 }
 
 /*--------------------------------------------------------------
@@ -1792,14 +1821,16 @@ input {
 .contenedorr button {
   border: none;
   padding: 10px 20px;
-  background: linear-gradient(130deg, #0078ff, #0078ff); /*#7fbbff*/
-  color: #ffffff;
+  background: linear-gradient(130deg, #64ffda, #64ffda); /*#7fbbff*/
+  color: #0a192f;
+  font-weight: bold;
   border-radius: 3px;
   cursor: pointer;
 }
 
 .contenedorr button:hover {
-  background: #003c7f;
+  background: #3c9982;
+  color: #ccd6f6;
 }
 
 #cv {
@@ -1814,6 +1845,19 @@ input {
   text-align: justify;
 }
 
+#foto {
+  border-radius: 5%;
+}
+
+.about-info span {
+  color: #ccd6f6;
+}
+
 .wp {
   color: var(--default-color);
+}
+
+#change-icon {
+  filter: invert(80%) sepia(51%) saturate(415%) hue-rotate(104deg)
+    brightness(100%) contrast(104%);
 }
