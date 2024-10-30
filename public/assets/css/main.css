@@ -490,11 +490,11 @@ h6 {
 
 .scroll-top:hover {
   background-color: color-mix(in srgb, #1e4c41, transparent 20%);
-  color: var(--contrast-color);
+  color: var(--heading-color);
 }
 
 .scroll-top:hover i {
-  color: var(--contrast-color);
+  color: var(--heading-color);
 }
 
 .scroll-top.active {
@@ -765,7 +765,7 @@ section,
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  color: var(--heading-color);
+  color: var(--accent-color);
   margin-bottom: 10px;
 }
 
