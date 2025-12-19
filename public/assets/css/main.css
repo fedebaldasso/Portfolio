@@ -769,6 +769,18 @@ section,
   margin-bottom: 10px;
 }
 
+.resume .resume-item h4 span {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--default-color);
+  text-transform: none;
+}
+
+.resume .resume-item h4 span:hover {
+  color: var(--heading-color);
+  text-decoration: underline;
+}
+
 .resume .resume-item h5 {
   font-size: 16px;
   padding: 5px 15px;
